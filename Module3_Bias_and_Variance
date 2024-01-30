@@ -1,0 +1,19 @@
+서울대학교 김건희 교수님 강의 공부 내용 
+
+1. Generalization
+- 학습 data로 일반화 -> unseen data에 적용
+- ML 모델의 목적 : unseen data에서 잘 동작하는 것
+
+2. Generalization Error (Unseen data에 대한 error)
+- Underfitting : Generalization error < Traning eror
+- Overfitting : Generalization error > Traning eror
+- 1차 목표 : Overfitting, 2차 목표 : 과도한 Overfitting인 경우 traning error 손해 보며 test error 낮추기
+
+3. Typical relation between capacity and error
+- capacity와 training error는 반비례하지만, 학습의 목적은 generalization(일반화) error의 반비례
+- validation set 사용해 학습 중 generalization error 예측
+- training error는 바로 측정이 가능하지만 generalization error는 바로 측정이 불가해 최적의 capacity를 찾는 것에 어려움이 있음 
+
+4. Regularization
+- 정규화를 통해 과적합 해결 
+- 
