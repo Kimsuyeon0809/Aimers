@@ -1,4 +1,4 @@
-서울대학교 김건희 교수님 강의 공부 내용 
+Module3 ML개론- 서울대학교 김건희 교수님 강의 공부 내용 (2)
 
 1. Generalization
 - 학습 data로 일반화 -> unseen data에 적용
@@ -16,4 +16,22 @@
 
 4. Regularization
 - 정규화를 통해 과적합 해결 
-- 
+- 목적함수 J(w) = (error) + λw^tw 
+- 목적함수 J(w) 최소화 = Loss 최소화 & Capacity 최소
+- λ : hyper parameter / training error가 아닌 일반화 error 낮추려는 목적
+- 같은 차수의 모델에서도 λ의 크기가 크면 underfitting 될 가능성이 높고, λ가 0에 가까우면 overfitting 될 가능성이 높다.
+- λw^tw : 과적합 방지하는 regularization 항
+
+5. Bias & Variance
+- Bias : 예측의 평균과 true값의 차이
+- Variance : 데이터 평균과 각 데이터의 거리 제곱의 평균 (E[(x-u)^2])
+- Test error = Bias + Variance
+- Bias와 Variance는 trade-off 관계 -> 앙상블 사용
+
+6. Overfitting vs Underfitting
+6-1) 높은 variance는 overfitting을 암시
+- 데이터가 없는 부분이 널뛰지 않도록, train data가 많을수록 variance 감소
+- Variance와 모델의 복잡도는 비례
+6-2) 높은 bias는 underfitting을 암시
+- bias가 높다는 것은, 영점이 맞지 않다는 것과 같아서, 정확하지 않은 모델을 의미한다. 때문에 underfitting과 연관되고, 복잡도가 너무 낮아진다.
+- bias를 줄이려면 모델의 복잡도를 높여야 한다. 하지만, 그러면 variance도 높아진다.(Bias와 Variance는 trade-off 관계이기 때문)
